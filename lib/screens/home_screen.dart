@@ -4,22 +4,22 @@ import '_pages/working_dialog.dart';
 import 'working_estimate_alert.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(height: 50),
+          const SizedBox(height: 50),
           IconButton(
             onPressed: () {
               WorktimeDialog(
                 context: context,
-                widget: WorktimeEstimateAlert(),
+                widget: const WorktimeEstimateAlert(),
               );
             },
-            icon: Icon(Icons.ac_unit),
+            icon: const Icon(Icons.ac_unit),
           )
         ],
       ),

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
 class WorktimeEstimateAlert extends StatelessWidget {
-  const WorktimeEstimateAlert({Key? key}) : super(key: key);
+  const WorktimeEstimateAlert({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final PageController controller = PageController();
+    final controller = PageController();
+
     return PageView(
       controller: controller,
       children: const <Widget>[
