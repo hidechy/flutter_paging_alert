@@ -7,19 +7,17 @@ class WorktimeEstimateAlert extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = PageController();
 
-    return PageView(
+    return PageView.builder(
       controller: controller,
-      children: const <Widget>[
-        Center(
-          child: Text('First Page'),
-        ),
-        Center(
-          child: Text('Second Page'),
-        ),
-        Center(
-          child: Text('Third Page'),
-        ),
-      ],
+      itemCount: 5,
+      itemBuilder: (context, index) {
+        return Center(
+          child: Text(
+            index.toString(),
+            style: TextStyle(fontSize: 30),
+          ),
+        );
+      },
     );
   }
 }
