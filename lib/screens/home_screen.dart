@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '_pages/working_dialog.dart';
+import 'working_dialog.dart';
 import 'working_estimate_alert.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
             onPressed: () {
               WorktimeDialog(
                 context: context,
-                widget: const WorktimeEstimateAlert(),
+                widget: WorktimeEstimateAlert(),
               );
             },
             icon: const Icon(Icons.ac_unit),
