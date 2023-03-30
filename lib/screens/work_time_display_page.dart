@@ -9,10 +9,18 @@ class WorkTimeDisplayPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          const SizedBox(height: 50),
-          Text(numStr),
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (context, position) {
+                return Container(
+                  child: Text(position.toString()),
+                );
+              },
+              childCount: 100,
+            ),
+          ),
         ],
       ),
     );
